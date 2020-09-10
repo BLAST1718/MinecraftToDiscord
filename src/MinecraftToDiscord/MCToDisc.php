@@ -7,7 +7,7 @@ use MinecraftToDiscord\EventListeners\EventListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-class MCToDIsc extends PluginBase{
+class MCToDisc extends PluginBase{
 
      function onEnable(): void{
 		 if (!is_dir($this->getDataFolder())){
