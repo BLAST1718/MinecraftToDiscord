@@ -1,0 +1,7 @@
+---
+name: MCToDisc
+main: MinecraftToDiscord\MCToDisc
+author: PROplayingGamez
+api: 3.0.0
+version: 1.0.0
+...
