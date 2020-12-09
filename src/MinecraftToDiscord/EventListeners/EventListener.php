@@ -37,7 +37,7 @@ class EventListener implements Listener {
 		if ($player) {
 			$config = new Config($this->main->getDataFolder() . "config.yml");
 			$webhook = $config->get("weebhook");
-			DiscordManager::postWebhook($webhook, $player->getName() . " has joined the server!", "");
+			DiscordManager::postWebhook($webhook, (+) . $player->getName() . " joined the server.", "");
 		}
 	}
 
@@ -47,7 +47,7 @@ class EventListener implements Listener {
 		if ($player) {
 			$config = new Config($this->main->getDataFolder() . "config.yml");
 			$webhook = $config->get("weebhook");
-			DiscordManager::postWebhook($webhook, $player->getName() . " has left the server!", "");
+			DiscordManager::postWebhook($webhook, (+) . $player->getName() . " Left the server.", "");
 		}
 	}
 
@@ -57,7 +57,7 @@ class EventListener implements Listener {
 		if ($player) {
 			$config = new Config($this->main->getDataFolder() . "config.yml");
 			$webhook = $config->get("weebhook");
-			DiscordManager::postWebhook($webhook, "[" . $player->getName() . "] `" . $ev->getMessage() . "`", "");
+			DiscordManager::postWebhook($webhook, "[" . $player->getName() . "] ```" . $ev->getMessage() . "```", "");
 		}
 	}
 }
